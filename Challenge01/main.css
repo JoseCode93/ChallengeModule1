@@ -130,16 +130,18 @@ main {
   text-align: center;
 }
 
-.selected-rating-text {
-  background-color: hsl(216, 12%, 8%);
-  color: hsl(25, 97%, 53%);
+.selected-rating {
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 76%, 42%);
   font-size: 16px;
   font-weight: 700;
   padding: 8px 16px;
   border-radius: 20px;
   margin: 0 auto 24px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border: 2px solid hsl(25, 97%, 53%); /* Añade un borde */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para mejor visibilidad */
+  border: 1px solid hsl(216, 12%, 8%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
