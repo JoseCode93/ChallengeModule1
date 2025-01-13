@@ -1,0 +1,14 @@
+{
+  "name": "feedback-challenge",
+  "version": "1.0.0",
+  "description": "Interactive feedback component",
+  "main": "Challenge01/script.js",
+  "scripts": {
+    "start": "live-server Challenge01"
+  },
+  "author": "José Zafra",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
