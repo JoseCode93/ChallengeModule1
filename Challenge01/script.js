@@ -2,21 +2,8 @@
 const ratingButtons = document.querySelectorAll(".rating button");
 const submitButton = document.querySelector(".submit-button");
 const feedbackCard = document.querySelector(".feedback-card");
-
-// Crear la tarjeta de agradecimiento dinámica
-function createThankYouCard(selectedRating) {
-  const thankYouCard = document.createElement("div");
-  thankYouCard.classList.add("feedback-card");
-  thankYouCard.innerHTML = `
-        <div class="icon">
-            <span class="star">★</span>
-        </div>
-        <h1>¡Gracias!</h1>
-        <p>Seleccionaste ${selectedRating} de 5.</p>
-        <p>¡Agradecemos mucho tu tiempo en darnos tu opinión para mejorar nuestro servicio!</p>
-    `;
-  document.body.appendChild(thankYouCard);
-}
+const thankYouCard = document.querySelector(".thank-you-card");
+const selectedRatingText = document.querySelector(".selected-rating");
 
 // Variable para guardar la calificación seleccionada
 let selectedRating = null;
@@ -38,11 +25,14 @@ ratingButtons.forEach((button) => {
 // Evento para el botón de enviar
 submitButton.addEventListener("click", () => {
   if (selectedRating) {
-    // Ocultar la tarjeta actual
+    // Ocultar la tarjeta de feedback
     feedbackCard.style.display = "none";
 
     // Mostrar la tarjeta de agradecimiento
-    createThankYouCard(selectedRating);
+    thankYouCard.style.display = "block";
+
+    // Actualizar el texto con la calificación seleccionada
+    selectedRatingText.textContent = `Seleccionaste ${selectedRating} de 5`;
   } else {
     alert("Por favor, selecciona una calificación antes de enviar.");
   }
