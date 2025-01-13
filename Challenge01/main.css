@@ -27,7 +27,7 @@ main {
   background-color: hsl(213, 19%, 18%);
   border-radius: 16px;
   padding: 24px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 375px; /* Mantiene el diseño responsivo */
@@ -44,7 +44,6 @@ main {
   align-items: center;
   margin: 0 auto 16px;
 }
-
 .icon.star {
   width: 32px;
   height: 32px;
@@ -122,14 +121,16 @@ main {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .thank-you-card p {
   color: hsl(217, 12%, 63%);
   margin-bottom: 16px;
+  text-align: center;
 }
 
-.selected-rating {
+.selected-rating-text {
   background-color: hsl(216, 12%, 8%);
   color: hsl(25, 97%, 53%);
   font-size: 16px;
@@ -138,4 +139,7 @@ main {
   border-radius: 20px;
   margin: 0 auto 24px;
   display: inline-block;
+  text-align: center;
+  border: 2px solid hsl(25, 97%, 53%); /* Añade un borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para mejor visibilidad */
 }
