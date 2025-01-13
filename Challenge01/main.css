@@ -22,12 +22,15 @@ main {
 }
 
 /* Tarjeta de feedback */
-.feedback-card {
+.feedback-card,
+.thank-you-card {
   background-color: hsl(213, 19%, 18%);
   border-radius: 16px;
   padding: 24px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 375px; /* Mantiene el diseño responsivo */
 }
 
 /* Icono */
@@ -43,18 +46,20 @@ main {
 }
 
 .icon.star {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 32px; /* Ajusta el tamaño según sea necesario */
-  height: 32px; /* Ajusta el tamaño según sea necesario */
+  width: 32px;
+  height: 32px;
   background-image: url("assets/icon-star.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
-.icon .star {
-  font-size: 24px;
-  color: hsl(25, 97%, 53%);
+
+.icon.thank-you {
+  width: 64px;
+  height: 64px;
+  background-image: url("assets/illustration-thank-you.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 24px;
 }
 
 .feedback-card h1 {
@@ -110,4 +115,27 @@ main {
 
 .submit-button:hover {
   background-color: hsl(25, 97%, 63%);
+}
+
+/* Thank You Card */
+.thank-you-card h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.thank-you-card p {
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 16px;
+}
+
+.selected-rating {
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(25, 97%, 53%);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 0 auto 24px;
+  display: inline-block;
 }
